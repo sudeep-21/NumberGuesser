@@ -85,6 +85,13 @@ public class Window extends Application {
                                 lowHigh.setText(usrAns + " is larger than actual answer!");
                                 lowHigh.setVisible(true);
                             }
+
+                            if (lives == 0) {
+                                status.setText("Game Over!!!");
+                                status.setVisible(true);
+                                lowHigh.setText("The number was " + calculations.number);
+                                answer.setText("");
+                            }
                         }
                     } else {
                         status.setText("Please Enter Valid Number!!");
